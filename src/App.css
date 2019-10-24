@@ -2,21 +2,86 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.App-container{
+  margin-bottom: 55px ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.DigimonList-item{
+  margin-bottom: 24px;
+  width: 50%;
 }
 
-.App-link {
-  color: #09d3ac;
+.DigimonList {
+  padding: 16px;
+}
+
+.DigimonList-item{
+display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.CardDigimon{
+  padding: 30px;
+}
+
+.footer{
+  background: black !important;
+  color: white !important;
+}
+
+.footer a {
+  color: white !important;
+}
+
+.footer a:hover {
+  color: white !important;
+  cursor: pointer;
+} 
+
+/* SPINNER */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 90px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid black;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: black transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.lds-ring p{
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.loading-spinner{
+  margin-bottom: 20px;
 }
