@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Componentes/Componente/Navbarlayout';
-import ContainerLayout from './Componentes/Componente/Containerlayout';
-import MainDigimon from './Componentes/Contenedores/MainDigimonContainer';
-import FooterLayout from './Componentes/Componente/FooterLayout';
+import { Switch, Route } from 'react-router-dom';
+import Home from './Componentes/Pages/Home';
+import DetailDigimon from './Componentes/Pages/DetailDigimon';
+import { Page404 } from './Componentes/Pages/Page404';
 
 import './App.css';
 import 'bulma/css/bulma.css'
@@ -11,13 +11,13 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <Navbar />
-        <ContainerLayout />
-        <h1 className="title">Digimon Api</h1>
-        <br />
-        <MainDigimon />
-        <FooterLayout />
+         <Switch>
+            <Route exact path="/"  component={Home}/>
+            <Route exact path="/DetailDigimon/:id" component={DetailDigimon}/>
+            <Route component={Page404}/>
+        </Switch>
       </div>
+
     );
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const CardLayout = (props) => {
     return(
@@ -13,11 +13,13 @@ const CardLayout = (props) => {
             <div className="media-content">
                 <p className="title is-4">{ props.name }</p>
                 <p className="subtitle is-6">{ props.level }</p>
-                <a href="#" className="has-text-info">
+                <Link
+                    className="has-text-info" 
+                    to={`/DetailDigimon/${props.id}`}  
+                    >
                     Ver Detalle
-                </a>
+                </Link>
             </div>
-
         </div>
     );
 }

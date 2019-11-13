@@ -85,3 +85,8 @@ display: flex;
 .loading-spinner{
   margin-bottom: 20px;
 }
+
+.t_container{
+  margin:30px;
+  box-shadow: 2px 1px 1px rgb(61, 60, 60);
+}

@@ -21,9 +21,16 @@ class SearchContainer extends Component {
     render(){
         return(
             <div className="container">
-                <form className="field is-grouped " onSubmit={this._hanldeSubmit}>
+                <form 
+                    className="field is-grouped " 
+                    onSubmit={this._hanldeSubmit} >
+                        
                     <p className="control is-expanded">
-                        <input className="input" type="text" placeholder="Busca tu Digimon..." onChange={this._handleChange} />
+                        <input 
+                            className="input" 
+                            type="text"
+                            placeholder="Busca tu Digimon..." 
+                            onChange={this._handleChange} />
                     </p>
                     <p className="control">
                         <button className="button is-info">
